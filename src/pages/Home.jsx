@@ -22,12 +22,23 @@ const Home = () => {
 
 	console.log('DATA', data);
 
-	const handleDelete = () => {};
+	const handleDelete = async (id) => {
+		if (window.confirm('Are you sure you want to delete this blog? ')) {
+			const res = await axios.delete(`http://localhost:8000/blogs/${id}`);
+			if (res.status === 200) {
+				toast.success('Blog deleted successfully');
+				loadBlogData();
+			} else {
+				toast.error('Something went wrong!!');
+			}
+		}
+	};
 
 	const exerpt = (str) => {
 		if (str.length > 50) {
 			str = str.substring(0, 50) + ' ... ';
 		}
+		return str;
 	};
 	return (
 		<>
