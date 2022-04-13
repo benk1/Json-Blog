@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { MDBBtn, MDBInput, MDBValidation } from 'mdb-react-ui-kit';
+import { MDBBtn, MDBInput, MDBTextArea, MDBValidation } from 'mdb-react-ui-kit';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -141,7 +141,7 @@ const AddEditBlog = () => {
 				/>
 				<br />
 
-				<MDBInput
+				<MDBTextArea
 					value={description || ''}
 					name="description"
 					type="text"

@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
 	return (
 		<div>
-			<h2>Page Not Found!!!</h2>
+			<img src="/images/404.jpg" alt="Not Found!" />
 		</div>
 	);
 };
