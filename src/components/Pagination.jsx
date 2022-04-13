@@ -88,7 +88,7 @@ const Pagination = ({
 		}
 	};
 
-	return <div>{renderPagination}</div>;
+	return <div>{renderPagination()}</div>;
 };
 
 export default Pagination;
